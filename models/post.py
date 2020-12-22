@@ -25,10 +25,10 @@ class Post(object):
         Database.insert(collection="posts", data=self.json())
 
     @classmethod
-    def from_mongo(cls, id):
-        post_data = Database.find_one(collection="posts", query={"_id": id})
+    def from_mongo(cls, _id):
+        post_data = Database.find_one(collection="posts", query={"_id": _id})
         return cls(**post_data)
 
     @staticmethod
-    def from_blog(id):
-        return [post for post in Database.find(collection="posts", query={"blog_id": id})]
+    def from_blog(_id):
+        return [post for post in Database.find(collection="posts", query={"blog_id": _id})]

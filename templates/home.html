@@ -6,14 +6,11 @@
 </header>
 <section>
 
-    <div class="list-form mb-3">
-        <a class="btn btn-primary">
-            LogIn
+    <div class="mb-3">
+        <a class="btn btn-primary" href="{{ url_for('users.login') }}">
+            Log In
         </a>
-    </div>
-
-    <div class="list-form">
-        <a class="btn btn-primary">
+        <a class="btn btn-primary" href="{{ url_for('users.register') }}">
             Sign Up
         </a>
     </div>
